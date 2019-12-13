@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/goods_list/goods_list",
+    "pages/goods_detail/goods_detail",
+    "pages/cart/cart",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/auth/auth",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "优购",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/_shouye.png",
+        "selectedIconPath": "icons/shouye.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icons/_fenlei.png",
+        "selectedIconPath": "icons/fenlei.png"
+      },{
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/_gouwuche.png",
+        "selectedIconPath": "icons/gouwuche.png"
+      },{
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "icons/_yonghu.png",
+        "selectedIconPath": "icons/yonghu.png"
+      }
+    ],
+    "selectedColor":"#d81e06"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

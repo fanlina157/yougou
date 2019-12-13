@@ -1,0 +1,60 @@
+/* 使用主题颜色 */
+/* view {
+  color:var(--themeColor);
+} */
+/* 轮播图 */
+.index_swiper {
+  width: 750rpx;
+  height: 340rpx;
+  /* 
+  width: 100%;
+  height: calc(100vw*340/750); */
+}
+.index_swiper .swiper_item image {
+  width: 100%;
+}
+/* 分类导航 */
+.index_cate {
+  display: flex;
+}
+.index_cate .cata_item {
+  padding: 20rpx;
+  flex: 1;
+}
+.cata_item image {
+  width: 100%;
+}
+/* 楼层 */
+.index_floor {
+
+}
+.floor_item {
+}
+.floor_title image {
+  width: 100%;
+}
+/* .floor_content { */
+  /* 清除浮动 */
+  /* overflow: hidden;
+} */
+.floor_content {
+  padding-right:10rpx;
+}
+.floor_content navigator {
+  float: left;
+  width:33.33%
+}
+/* 后4个 加左边框 */
+.floor_content navigator:nth-last-child(-n+4) {
+  border-left: 10rpx solid #fff;
+}
+/* 2,3 加下边框 */
+.floor_content navigator:nth-last-child(2),
+.floor_content navigator:nth-last-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+
+.floor_content image {
+  width:100%;
+
+}

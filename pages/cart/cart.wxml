@@ -1,0 +1,29 @@
+<view>
+
+    <view class="btn">
+        <button bindtap="getAdress">添加收货地址</button>
+    </view>
+
+    <!-- <view class="cart_list">
+        <view class="cart_item">
+            <checkbox-group bindchange="checkboxChange">
+                <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </checkbox-group>
+
+           <view class="goods_img">
+                <image src="">
+                
+                </image>
+           </view>
+
+            <view class="goods_desc">
+                <view class="goods_name">还行</view>
+                <view class="goods_price">
+                    <view class="price">34343</view>
+                    <view class="num">44</view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+
+</view>

@@ -1,0 +1,63 @@
+/* pages/category/category.wxss */
+
+page {
+    height: 100%;
+}
+.cate {
+    height: 100%;
+}
+.cate_container {
+    /* background-color: red; */
+    height: calc(100vh - 90rpx);
+    display: flex;
+}
+.cate_nav {
+  /* 自动继承高度 */
+    flex: 2;
+    /* background-color: gray; */
+}
+.cate_nav .nav_item {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 30rpx; */
+}
+
+
+.cate_content {
+    /* 自动继承高度 */
+    flex: 5;
+    /* background-color: orange; */
+}
+
+.content_item_title {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: red;
+}
+.content_item_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content_item_box navigator {
+   width:30%;
+   margin:5rpx;
+   text-align: center;
+}
+.content_item_box image {
+  width:50%;
+}
+.content_item_box  .box_text {
+  font-size: 25rpx;
+  
+}
+
+
+/* 左侧菜单的选中效果 */
+.active {
+  color:var(--themeColor);
+  border-left: 5rpx solid var(--themeColor);
+}

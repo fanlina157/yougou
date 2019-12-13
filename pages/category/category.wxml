@@ -1,0 +1,55 @@
+<view class="cate">
+  <!-- 搜索组件 -->
+  <SearchInput></SearchInput>
+
+  <view class="cate_container">
+    <!-- 左侧导航 -->
+    <!-- 这里判断选中状态根据index 而不是根据cat_id 是因为 这样的currentIndex 默认值方便写成0 -->
+    <scroll-view class="cate_nav" scroll-y>
+          <view 
+          class="nav_item {{currentIndex===index?'active':''}}" 
+          wx:for="{{leftMenu}}" 
+          wx:key="cat_id" 
+          bindtap="tapNam" 
+          data-index="{{index}}">
+              {{item.cat_name}}
+          </view>
+    </scroll-view>
+    <!-- view{$}*100 -->
+  
+
+
+    <!-- 右侧内容 -->
+      <scroll-view scroll-top="{{scrollTop}}" class="cate_content" scroll-y>
+           <view 
+            class="content_item" 
+            wx:for="{{rightCont}}" 
+            wx:key="cat_id"
+            wx:for-item="item1"
+            wx:for-index="index1">
+
+                <view class="content_item_title"> 
+                  <text>/ </text>
+                  <text>{{item1.cat_name}}</text>
+                  <text> /</text>
+                </view>
+                <view class="content_item_box">
+                    <navigator                    
+                      wx:for="{{item1.children}}"
+                      wx:key="cat_id"
+                      wx:for-item="item2"
+                      wx:for-index="index2"
+                      url="../goods_list/goods_list?cid={{item2.cat_id}}"
+                    >
+                      <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+                      <view class="box_text">{{item2.cat_name}}</view>
+                    </navigator>
+                </view>
+                    
+
+          </view>
+
+      </scroll-view>
+  
+  </view>
+</view>

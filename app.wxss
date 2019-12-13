@@ -1,0 +1,18 @@
+
+/* 全局引入字体图标 */
+@import "./styles/iconfont";
+
+/* 全局默认样式 */
+view,scroll-view,swiper,swiper-item,movable-area,movable-view,cover-view,cover-image,icon,text,rich-text,progress,button,checkbox-group,checkbox,form,input,label,picker,picker-view,radio-group,radio,slider,switch,textarea,navigator,functional-page-navigator,image,video,camera,live-player,live-pusher,map,canvas,open-data,web-view,ad{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+/* 定义主题颜色 */
+page {
+  --themeColor:#eb4450;
+  font-size: 28rpx;
+}
+image {
+  width:100%;
+}

@@ -1,0 +1,78 @@
+/* 轮播图样式 */
+
+/* 这必须给，防止固定定位遮住内容 */
+page {
+  padding-bottom: 90rpx;
+
+}
+/* 先找到原图片的高度 400*400 */
+/* swiper 标签宽100vw  所以也是1：1  高度 100vh */
+.swiper {
+  height: 34vh;
+  text-align: center;
+}
+image{
+  width:60%;
+}
+
+.price {
+  color:var(--themeColor);
+}
+
+
+.desc {
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 5rpx solid #000;
+}
+.coll {
+  display: flex
+}
+.text {
+  flex: 5;
+}
+.shoucang {
+  flex:1;
+  border-left: 5rpx solid #000;
+  padding-left: 10rpx;
+}
+
+
+.bottom_bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-around;
+  border-top:2rpx solid #000;
+}
+.tool_item {
+  background:#fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cart {
+  flex: 2;
+  background-color: orange;
+}
+.buy {
+  flex: 2;
+  background-color: red;
+}
+
+
+/* 加上按钮，透明度为0， 大小和view  标签一致 */
+.kefu button,.share button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  opacity: 0;
+}
