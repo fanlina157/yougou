@@ -63,6 +63,7 @@ Page({
     if(index === -1) {
       // 没有
       this.addCartInfo.num =1
+      this.addCartInfo.checked = true
       cart.push(this.addCartInfo)
     }else {
       // 有

@@ -1,11 +1,20 @@
-// pages/pay/pay.js
+
+import { showToast } from '../../utils/asyncWx.js'
+/***
+ * 1. 支付页面是购物车checked  为true 的数据
+ * 
+ * 
+ */
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cart: [], // 购物车数据
+    totalPrice: 0, // 总价格
+    totalNum: 0 // 总数量
   },
 
   /**
@@ -14,53 +23,34 @@ Page({
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
-  },
+    let cart = wx.getStorageSync('cart') || []
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    // 过滤购物车数据
+    cart = cart.filter(v=>v.checked)   
 
-  },
+    var totalPrice = 0;
+    var totalNum = 0;
+    cart.forEach(item => {
+        totalPrice += item.num * item.goods_price
+        totalNum += item.num
+    });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+    this.setData({
+      cart,
+      totalPrice,
+      totalNum
+    })
+  } , 
 
-  },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  // 支付
+  orderPay(){
+    const {token} =wx.getStorageSync('token')
+    if(!token)
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
+
 })

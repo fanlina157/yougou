@@ -1,29 +1,91 @@
 <view>
-
+    <!-- 添加地址按钮 -->
     <view class="btn">
         <button bindtap="getAdress">添加收货地址</button>
     </view>
 
-    <!-- <view class="cart_list">
-        <view class="cart_item">
-            <checkbox-group bindchange="checkboxChange">
-                <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+
+    <!-- 购物车列表 -->
+    <view class="cart_list">
+
+      <view class="cart_title">
+        购物车
+      </view>
+      
+      <view class="cart_main">
+      
+        <view class="cart_item"
+          wx:for="{{cart}}"
+          wx:key="goods_id"
+        >
+        
+          <view class="checkbox">
+            <checkbox-group data-id="{{item.goods_id}}" bindchange="changeCheckedItem">
+              <checkbox value="{{item.goods_id}}" checked="{{item.checked}}"></checkbox>         
             </checkbox-group>
+          </view>
 
-           <view class="goods_img">
-                <image src="">
-                
-                </image>
-           </view>
+          <navigator>
+            <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+          </navigator>  
 
-            <view class="goods_desc">
-                <view class="goods_name">还行</view>
-                <view class="goods_price">
-                    <view class="price">34343</view>
-                    <view class="num">44</view>
-                </view>
+
+          <view class="cart_desc">
+          
+            <view class=" ">
+              {{item.goods_name}}
             </view>
-        </view>
-    </view> -->
 
+            <view class="cart_r">
+            
+              <view class="cart_main_price">
+                {{item.goods_price}}
+              </view>
+                <!-- 我自己的写法 -->
+
+
+              <!-- <view class="cart_main_num">
+                <view bindtap="desc" data-id="{{item.goods_id}}">-</view>
+                <view>{{item.num}}</view>
+                <view bindtap="add" data-id="{{item.goods_id}}">+</view>
+              </view> -->
+
+
+              <!-- 老师的写法  绑定同一个函数 通过自定义属性区分 -->
+              <view class="cart_main_num">
+                <view bindtap="operateNum" data-op="{{-1}}" data-id="{{item.goods_id}}">-</view>
+                <view>{{item.num}}</view>
+                <view bindtap="operateNum" data-op="{{1}}" data-id="{{item.goods_id}}">+</view>
+              </view>
+
+
+            </view>
+          
+          </view>
+
+        </view>
+      
+      </view>
+
+    </view>
+
+
+    <!-- 全选及付款 -->
+    <view class="pay_wrap">
+      <!-- 全选 -->
+      <view class="pay_check">
+        <checkbox-group bindchange="changeChecked">
+          <checkbox checked="{{allchecked}}"></checkbox>
+          全选
+        </checkbox-group>
+      </view>
+      <!-- 总数 -->
+       <view class="pay_all">
+        总计：<text>{{totalPrice}}</text>
+        <view>包含运费</view>
+       </view>
+      <!-- 结算 -->
+       <view class="pay_pay" bindtap="pay">结算（{{totalNum}}）</view>
+        
+    </view>
 </view>

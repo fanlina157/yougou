@@ -1,2 +1,61 @@
-<!--pages/pay/pay.wxml-->
-<text>pages/pay/pay.wxml</text>
+<view>
+    <!-- 购物车列表 -->
+    <view class="cart_list">
+
+      <view class="cart_title">
+        支付
+      </view>
+      
+      <view class="cart_main">
+      
+        <view class="cart_item"
+          wx:for="{{cart}}"
+          wx:key="goods_id"
+        >
+        
+          <navigator>
+            <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+          </navigator>  
+
+
+          <view class="cart_desc">
+          
+            <view class=" ">
+              {{item.goods_name}}
+            </view>
+
+            <view class="cart_r">
+            
+              <view class="cart_main_price">
+                {{item.goods_price}}
+              </view>
+
+              <view class="cart_main_num">
+              <view>×</view>
+                <view>{{item.num}}</view>
+              </view>
+
+
+            </view>
+          
+          </view>
+
+        </view>
+      
+      </view>
+
+    </view>
+
+
+    <!-- 全选及付款 -->
+    <view class="pay_wrap">
+      <!-- 总数 -->
+       <view class="pay_all">
+        总计：<text>{{totalPrice}}</text>
+        <view>包含运费</view>
+       </view>
+      <!-- 结算 -->
+       <view class="pay_pay" bindtap="orderPay">支付（{{totalNum}}）</view>
+        
+    </view>
+</view>
