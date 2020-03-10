@@ -68,6 +68,27 @@
 					"id": -1,
 					"name": "支付页面",
 					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/echarts/echarts",
+					"pathName": "pages/echarts/echarts",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/zonglan/zonglan",
+					"pathName": "pages/zonglan/zonglan",
 					"scene": null
 				}
 			]

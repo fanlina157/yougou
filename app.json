@@ -1,6 +1,9 @@
 {
   "pages": [
+    "pages/picker/picker",
     "pages/index/index",
+    "pages/zonglan/zonglan",
+    "pages/echarts/echarts",
     "pages/category/category",
     "pages/goods_list/goods_list",
     "pages/goods_detail/goods_detail",

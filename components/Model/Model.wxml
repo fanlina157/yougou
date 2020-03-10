@@ -1,0 +1,9 @@
+<!--components/Model/Model.wxml-->
+<view class='mask' wx:if='{{show}}' bindtap='clickMask'>  
+  <view class='modal-content' style='height:{{height}}'>  
+    <view class="main-content">相关内容进行升级，为了减少用户的不必要操作，请您补全相关的信息</view>
+    <view class='modal-btn-wrapper'>
+      <button class='my-class confirm-btn' bindtap='confirm'>补全信息</button>
+    </view>
+  </view>
+</view>

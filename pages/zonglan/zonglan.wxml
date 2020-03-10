@@ -1,0 +1,7 @@
+
+
+
+  <!-- 弹窗 -->
+<my-modal my-class="my-btn" show="{{isShow}}" bindconfirm="modalConfirm" >
+</my-modal>
+

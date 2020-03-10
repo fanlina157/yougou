@@ -18,5 +18,22 @@ export const showToast=({title})=>{
     })
   })
 }
+/**
+ * promist 形式 登录
+ * 
+ */
+export const login = () => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      timeout:10000,
+      success: (res) => {
+        resolve(res)
+      },
+      fail: (err) => {
+        reject(err)
+      }
+    })
+  })
+}
 
 

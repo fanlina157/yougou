@@ -1,0 +1,5 @@
+/* pages/zonglan/zonglan.wxss */
+
+.model {
+  margin-top: 30px;
+}
